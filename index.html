@@ -18,6 +18,21 @@
             else return ("Scissors")
         }
 
+        // Player Choice Function
+        function getPlayerChoice() {
+        let choice = prompt("Choose your fighter: Rock, Paper, or Scissors?");
+                if (choice.toLocaleLowerCase() === "rock") {
+                    return ("Rock")
+                    }
+                else if (choice.toLocaleLowerCase() === "paper") {
+                    return ("Paper");
+                }
+                else if (choice.toLocaleLowerCase() === "scissors") {
+                    return ("Scissors");
+                }
+                else return choice = prompt("Oops, I didn't catch that. Rock, Paper, or Scissors?");
+        }
+
         // Play Round Function
 
         function playRound(playerSelection, computerSelection) {
@@ -58,7 +73,7 @@
 
         function playGame() {
             alert("Let's play a few rounds of Rock, Paper, Scissors!");
-           let playerSelection = prompt("Choose your fighter: Rock, Paper, or Scissors?");
+           playerSelection = prompt("Choose your fighter: Rock, Paper, or Scissors?");
                 if (playerSelection.toLocaleLowerCase === "rock") {
                     return ("You chose Rock! Great choice!");
                     }
@@ -71,7 +86,7 @@
                 else return playerSelection = prompt("Oops, I didn't catch that. Rock, Paper, or Scissors?");
         }
 
-        // const playerSelection = "rock"
+        let playerSelection = getPlayerChoice()
         const computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection))
 
