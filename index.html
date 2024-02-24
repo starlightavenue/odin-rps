@@ -18,9 +18,36 @@
         }
 
         function playRound(playerSelection, computerSelection) {
-
+            if (playerSelection.toLowerCase() === computerSelection.toLowerCase()) {
+                return ("Oh, look at that: It's a tie!");   
+            }
+            else if (playerSelection.toLowerCase() === "rock") {
+                if (computerSelection.toLowerCase() === "paper") {
+                    return ("Darn! Paper covers rock, you lose :(");
+                }
+                else if (computerSelection.toLowerCase() === "scissors") {
+                    return ("Yay! Rock breaks scissors, you win! :D");
+                }
+            }
+            else if (playerSelection.toLowerCase() === "paper") {
+                if (computerSelection.toLowerCase() === "rock") {
+                    return ("Yay! Paper covers rock, you win :D");
+                }
+                else if (computerSelection.toLowerCase() === "scissors") {
+                    return ("Darn! Scissors cut paper, you lose :(");
+                }
+            }
+            else if (playerSelection.toLowerCase() === "scissors") {
+                if (computerSelection.toLowerCase() === "paper") {
+                    return ("Yay! Scissors cut paper, you win! :D");
+                }
+                else if (computerSelection.toLowerCase() === "rock") {
+                    return ("Darn! Rock breaks scissors, you lose :(");
+                }
+            }
+            else return ("Huh, that didn't work. Make sure you pick rock, paper, or scissors, okay?");
         }
-        const playerSelection = "rock";
+        
         const computerSelection = getComputerChoice();
 
     </script>
