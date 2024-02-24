@@ -52,6 +52,16 @@
         function playGame() {
             alert("Let's play a few rounds of Rock, Paper, Scissors!");
            let playerSelection = prompt("Choose your fighter: Rock, Paper, or Scissors?");
+                if (playerSelection.toLocaleLowerCase === "rock") {
+                    return ("You chose Rock! Great choice!");
+                    }
+                else if (playerSelection.toLocaleLowerCase === "paper") {
+                    return ("You chose Paper! Great choice!");
+                }
+                else if (playerSelection.toLocaleLowerCase === "scissors") {
+                    return ("You chose Scissors! Great choice!");
+                }
+                else return playerSelection = prompt("Oops, I didn't catch that. Rock, Paper, or Scissors?");
         }
 
         const playerSelection = "rock"
