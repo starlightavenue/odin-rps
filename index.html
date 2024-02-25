@@ -37,9 +37,10 @@
 
         function playRound(playerSelection, computerSelection) {
         // Prompt for Player Selection
-
+        playerSelection = getPlayerChoice() 
+        computerSelection = getComputerChoice()   
         // Determine Round Winner
-            if (playerSelection.toLocaleLowerCase() === computerSelection.toLocaleLowerCase()) {
+            if (playerSelection === computerSelection) {
                 return ("Oh, look at that: It's a tie!");   
             }
             else if (playerSelection.toLocaleLowerCase() === "rock") {
@@ -73,22 +74,13 @@
 
         function playGame() {
             alert("Let's play a few rounds of Rock, Paper, Scissors!");
-           playerSelection = prompt("Choose your fighter: Rock, Paper, or Scissors?");
-                if (playerSelection.toLocaleLowerCase === "rock") {
-                    return ("You chose Rock! Great choice!");
-                    }
-                else if (playerSelection.toLocaleLowerCase === "paper") {
-                    return ("You chose Paper! Great choice!");
-                }
-                else if (playerSelection.toLocaleLowerCase === "scissors") {
-                    return ("You chose Scissors! Great choice!");
-                }
-                else return playerSelection = prompt("Oops, I didn't catch that. Rock, Paper, or Scissors?");
+            playRound(playerSelection,computerSelection);
         }
 
-        let playerSelection = getPlayerChoice()
-        const computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection))
+        let playerSelection
+        let computerSelection
+        console.log(playGame())
+        // console.log(playRound(playerSelection,computerSelection))
 
     </script>
 </body>
