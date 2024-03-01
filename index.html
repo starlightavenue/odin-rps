@@ -11,7 +11,7 @@
         let computerSelection
         let playerScore = 0;
         let computerScore = 0;
-        let currentScore = `Current Score: You: ${playerScore} | Computer: ${computerScore}`
+        let currentScore = `Current Score: You: ${playerScore} | Computer: ${computerScore}`;
 
         // Computer Choice Function
         function getComputerChoice() {
@@ -52,26 +52,32 @@
             }
             else if (playerSelection.toLocaleLowerCase() === "rock") {
                 if (computerSelection.toLocaleLowerCase() === "paper") {
+                    computerScore++;
                     return ("Darn! Paper covers rock, you lose :(");
                 }
                 else if (computerSelection.toLocaleLowerCase() === "scissors") {
+                    playerScore++;
                     return ("Yay! Rock breaks scissors, you win! :D");
                 }
             }
             else if (playerSelection.toLocaleLowerCase() === "paper") {
                 if (computerSelection.toLocaleLowerCase() === "rock") {
+                    playerScore++;
                     return ("Yay! Paper covers rock, you win :D");
                 }
                 else if (computerSelection.toLocaleLowerCase() === "scissors") {
+                    computerScore++;
                     return ("Darn! Scissors cut paper, you lose :(");
                 }
             }
             else if (playerSelection.toLocaleLowerCase() === "scissors") {
                 if (computerSelection.toLocaleLowerCase() === "paper") {
+                    playerScore++;
                     return ("Yay! Scissors cut paper, you win! :D");
 
                 }
                 else if (computerSelection.toLocaleLowerCase() === "rock") {
+                    computerScore++;
                     return ("Darn! Rock breaks scissors, you lose :(");
                 }
             }
@@ -89,7 +95,7 @@
             console.log(playRound(playerSelection, computerSelection));   
         }
        
-        playGame()
+        // playGame()
         // console.log(playRound(playerSelection,computerSelection))
 
     </script>
