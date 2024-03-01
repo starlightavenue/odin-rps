@@ -84,6 +84,13 @@
             else return ("Huh, that didn't work. Make sure you pick rock, paper, or scissors, okay?");
         }
 
+        // Update Score Function//
+        function updateScore() {
+            if (playerScore > 0 || computerScore > 0) {
+                currentScore = `Current Score: You: ${playerScore} | Computer: ${computerScore}`;
+            }
+        }
+
         // Play Game
 
         function playGame() {
